@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from apps.dashboard.views import DashboardView
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^$', DashboardView.as_view()),
+    url(r'^admin/', admin.site.urls)
 ]
